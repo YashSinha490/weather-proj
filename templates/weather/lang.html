@@ -33,7 +33,7 @@
         <a class="nav-link" href="{% url 'home' %}" style = "color:yellow">HOME <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style = "color:yellow" hidden>Features</a>
+        <a class="nav-link" href="{% url 'loc' %}" style = "color:yellow" hidden>Features</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#" style = "color:yellow" >ABOUT</a>
@@ -41,6 +41,13 @@
     </ul>
   </div>
 </nav>
+<style>
+  body{
+    background-image: url('{% static "download.jpg"%}');
+    background-repeat: no-repeat;
+    background-size: 100%
+  }
+</style>
 <body>
   <div class = 'container pt-4 pl-4 ' >
     <form  class = "pl-4"  action="{% url 'wetlang' %}" method = "POST">

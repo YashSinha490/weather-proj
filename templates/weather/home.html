@@ -19,7 +19,7 @@
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
       <a class="dropdown-item" href="{% url 'lang' %}" style="color:brown"><h5>USE YOUR OWN LANGUAGE</h5></a>
-      <a class="dropdown-item" href="#" style="color:brown"><h5>LOCATE ME</h5></a>
+      <a class="dropdown-item" href="{% url 'loc' %}" style="color:brown"><h5>LOCATE ME</h5></a>
       <a class="dropdown-item" href="#" style="color:brown"><h5>DETAILED INFO</h5></a>
     </div>
   </li>
@@ -41,8 +41,15 @@
     </ul>
   </div>
 </nav>
+<style>
+  body{
+    background-image: url('{% static "download.jpg"%}');
+    background-repeat: no-repeat;
+    background-size: 100%
+  }
+</style>
 <body>
-  <div class = 'container pt-4 pl-4 ' >
+  <div class = 'container pt-4 pl-4 '>
     <form  class = "pl-4"  action="{% url 'wethome' %}" method = "POST">
       {% csrf_token %}
     <input type = "text" name = "text"></input>

@@ -19,7 +19,7 @@
     </a>
     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
       <a class="dropdown-item" href="{% url 'lang' %}" style="color:brown"><h5>USE YOUR OWN LANGUAGE</h5></a>
-      <a class="dropdown-item" href="#" style="color:brown"><h5>LOCATE ME</h5></a>
+      <a class="dropdown-item" href="{% url 'loc' %}" style="color:brown"><h5>LOCATE ME</h5></a>
       <a class="dropdown-item" href="#" style="color:brown"><h5>DETAILED INFO</h5></a>
     </div>
   </li>
@@ -40,7 +40,13 @@
     </ul>
   </div>
 </nav>
-
+<style>
+  body{
+    background-image: url('{% static "download.jpg"%}');
+    background-repeat: no-repeat;
+    background-size: 100%
+  }
+</style>
 <div class="container">
   <h2 text-center>Language codes</h2>
 <h5>

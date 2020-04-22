@@ -23,9 +23,9 @@
       <a class="dropdown-item" href="#" style="color:brown"><h5>DETAILED INFO</h5></a>
     </div>
   </li>
-</li>
 </ul>
 </div>
+
 
   <div class="collapse navbar-collapse " id="navbarNavDropdown" ml-auto>
     <ul class="navbar-nav ml-auto">
@@ -50,28 +50,18 @@
 </style>
 <body>
   <div class = 'container pt-4 pl-4 ' >
-    <form  class = "pl-4"  action="{% url 'wetlang' %}" method = "POST">
-      {% csrf_token %}
-      <input type = "text" name = "text" placeholder = "Enter the city name"></input>
-    <input type = "text" name = "lang" placeholder = "Enter your language code"></input>
-    <a href="langinfo">Know your language code</a>
-    <input type = "submit" value = "Select"></input>
-    </form>
-
-
-    <ul class="list-unstyled pt-4 pl-4 ">
-      <div class="box">
-          <li class="media pl-4 border">
-      <img src="http://openweathermap.org/img/w/{{ curr_weath.icon }}.png" alt="Image class="mr-3">
-      <div class="media-body">
-        <h3 class="mt-0 mb-1 ">{{ curr_weath.city }}</h3>
-        <h5 class="mt-0 mb-1">{{ curr_weath.temperature }}°C</h5>
-        <h5 class="mt-0 mb-1">{{ curr_weath.description }}</h5>
-      </div>
-    </li>
+  <ul class="list-unstyled pt-4 pl-4 ">
+    <div class="box">
+        <li class="media pl-4 border">
+    <img src="http://openweathermap.org/img/w/{{ curr_weath.icon }}.png" alt="Image class="mr-3">
+    <div class="media-body">
+      <h3 class="mt-0 mb-1 ">{{ curr_weath.city }}</h3>
+      <h5 class="mt-0 mb-1">{{ curr_weath.temperature }}°C</h5>
+      <h5 class="mt-0 mb-1">{{ curr_weath.description }}</h5>
     </div>
-        </ul>
-
+  </li>
+  </div>
+      </ul>
 
   </div>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">

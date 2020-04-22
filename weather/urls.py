@@ -6,5 +6,6 @@ urlpatterns = [
        path('info', views.wethinf, name = "wethome"),
        path('lang', views.lang, name = "lang"),
        path('wetlang', views.wetlang, name = "wetlang"),
-       path('langinfo', views.langinfo, name = "langinfo")
+       path('langinfo', views.langinfo, name = "langinfo"),
+       path('loc', views.loc, name = "loc")
 ]

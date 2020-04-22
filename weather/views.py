@@ -36,3 +36,19 @@ def wetlang(request):
 
 def langinfo(request):
     return render(request, 'weather/langinfo.html')
+
+def loc(request):
+    urloc = "https://ipinfo.io/"
+    rloc = requests.get(urloc).json()
+    location = rloc['loc'].split(',')
+    lat = location[0]
+    long = location[1]
+    url = "http://api.openweathermap.org/data/2.5/weather?lat={}&lon={}&appid=86feeef11ba4a5d3bdfbe011b916a7a3&units=metric"
+    r = requests.get(url.format(lat, long)).json()
+    curr_weath={
+       'city':r['name'],
+       'temperature':r['main']['temp'],
+       'description':r['weather'][0]['description'],
+       'icon':r['weather'][0]['icon']
+       }
+    return render(request, 'weather/location.html', {'curr_weath': curr_weath})
