@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 import weather
+import maps
 
 urlpatterns = [
     path('', include('weather.urls')),
     path('admin/', admin.site.urls),
+    path('maps/', include('maps.urls')),
 ]

@@ -50,7 +50,7 @@
 </style>
 <body>
   <div class = 'container pt-4 pl-4 ' >
-    <form  class = "pl-4"  action="{% url 'wethome' %}" method = "POST" align-middle>
+    <form  class = "pl-4"  action="{% url 'wethome' %}" method = "POST">
       {% csrf_token %}
     <input type = "text" name = "text"></input>
     <input type = "submit" value = "Search"></input>
